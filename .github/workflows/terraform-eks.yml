@@ -11,9 +11,6 @@ jobs:
   terraform:
     runs-on: ubuntu-latest
 
-    env:
-      AWS_REGION: us-east-1
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -34,6 +31,6 @@ jobs:
       - name: Terraform Plan
         run: terraform plan
 
-      - name: Terraform Apply
-        run: terraform apply -auto-approve
+     # - name: Terraform Apply
+       # run: terraform apply -auto-approve
         # Remove -auto-approve for manual approval in production
